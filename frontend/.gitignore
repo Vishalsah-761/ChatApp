@@ -1,0 +1,22 @@
+# Node
+node_modules/
+
+# Vite
+dist/
+.vite/
+
+# Env
+.env
+.env.local
+.env.production
+
+# Logs
+*.log
+
+# OS / Editor
+.DS_Store
+.vscode/
+.idea/
+
+# Cache
+.eslintcache
