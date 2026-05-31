@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+
+  backend:
+    build:
+      context: ./backend
+    container_name: chat_backend
+    ports:
+      - "5001:5001"
+    env_file:
+      - ./backend/.env
+    restart: always
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: chat_frontend
+    ports:
+      - "5173:5173"
+    env_file:
+      - ./frontend/.env
+    depends_on:
+      - backend
+    restart: always
